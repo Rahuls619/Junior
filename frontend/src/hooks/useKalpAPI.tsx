@@ -12,7 +12,7 @@ export const useKalpApi = () => {
     const params = {
       network: 'TESTNET',
       blockchain: 'KALP',
-      walletAddress: '928bc86952ebb55788e2042ad478b8c1db3ded0d',
+      walletAddress: '7caecd9a18ea723ae81aee7119720e17c69e38d1',
       args: args,
     };
 
@@ -43,7 +43,7 @@ export const useKalpApi = () => {
   const claim = async (address : string) => {
     setLoading(true);
     const endpoint =
-      'https://gateway-api.kalp.studio/v1/contract/kalp/query/CBSWwbzz2Ob3bF8oErPS0oMllBFcRbEL1726764163536/Claim';
+      'https://gateway-api.kalp.studio/v1/contract/kalp/query/0IPgLQCre46P4Kprz5eNi1YMX4DEJqDS1726857830482/Claim';
     const args = {
       amount: 100,
       address: address,
@@ -53,7 +53,7 @@ export const useKalpApi = () => {
 
   const balanceOf = async (account : string) => {
     const endpoint =
-    'https://gateway-api.kalp.studio/v1/contract/kalp/query/CBSWwbzz2Ob3bF8oErPS0oMllBFcRbEL1726764163536/BalanceOf';
+    'https://gateway-api.kalp.studio/v1/contract/kalp/query/0IPgLQCre46P4Kprz5eNi1YMX4DEJqDS1726857830482/BalanceOf';
     const args = {
       account: account,
     };
@@ -62,7 +62,7 @@ export const useKalpApi = () => {
 
   const totalSupply = async () => {
     const endpoint =
-      'https://gateway-api.kalp.studio/v1/contract/kalp/query/CBSWwbzz2Ob3bF8oErPS0oMllBFcRbEL1726764163536/TotalSupply';
+      'https://gateway-api.kalp.studio/v1/contract/kalp/query/0IPgLQCre46P4Kprz5eNi1YMX4DEJqDS1726857830482/TotalSupply';
     const args = {};
     return callApi(endpoint, args);
   };
